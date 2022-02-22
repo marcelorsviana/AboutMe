@@ -34,10 +34,17 @@ class MainActivity : AppCompatActivity() {
     private fun addNickname(view: View) {
 
         binding.apply {
-            binding.nicknameText.text = binding.nicknameEdit.text.toString()
-            binding.nicknameEdit.visibility = View.GONE
-            binding.doneButton.visibility = View.GONE
-            binding.nicknameText.visibility = View.VISIBLE
+            myName?.nickname = nicknameEdit.text.toString()
+            invalidateAll()
+
+            //binding.nicknameText.text = binding.nicknameEdit.text.toString()
+            nicknameEdit.visibility = View.GONE
+            doneButton.visibility = View.GONE
+            nicknameText.visibility = View.VISIBLE
+
+//            binding.nicknameEdit.visibility = View.GONE
+//            binding.doneButton.visibility = View.GONE
+//            binding.nicknameText.visibility = View.VISIBLE
         }
 
         // Hiding the keyboard.

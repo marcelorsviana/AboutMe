@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="myName"
-            type="com.mrsv.android.aboutme.MyName"
-            />
+            type="com.mrsv.android.aboutme.MyName" />
     </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,6 +28,17 @@
             android:textAlignment="center"
             tools:text="Marcelo R S Viana" />
 
+        <TextView
+            android:id="@+id/nickname_text"
+            style="@style/NameStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:paddingBottom="@dimen/small_padding"
+            android:text="@={myName.nickname}"
+            android:textAlignment="center"
+            android:visibility="gone" />
+
         <EditText
             android:id="@+id/nickname_edit"
             style="@style/NameStyle"
@@ -36,6 +48,7 @@
             android:hint="@string/what_is_your_nickname"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+
             android:textAlignment="center" />
 
         <Button
@@ -47,17 +60,6 @@
             android:layout_marginTop="@dimen/layout_margin"
             android:fontFamily="@font/roboto"
             android:text="@string/done" />
-
-        <TextView
-            android:id="@+id/nickname_text"
-            style="@style/NameStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:paddingBottom="@dimen/small_padding"
-            android:text=""
-            android:textAlignment="center"
-            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/star_image"
